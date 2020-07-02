@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, Link, Private-Route} from 'react-router-dom';
+import { Switch, Route, Link} from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
-import Protected from './components/Protected';
+
 
 
 
@@ -31,9 +31,6 @@ function App() {
         <Route path='/login'>
           <Login/>
         </Route> 
-        <PrivateRoute path ='/protected'>
-
-        </PrivateRoute>
       </Switch>
       
     </div>
@@ -43,10 +40,5 @@ function App() {
   );
 }
 
-const PrivateRoute = ({component: Protected, ...rest}) => {
-  <Route {...rest} render={props => (
-    
-  )}
-}
 
 export default App;
