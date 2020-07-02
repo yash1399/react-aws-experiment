@@ -17,7 +17,7 @@ const Register = () => {
     const onSubmit =  async (event) => {
         event.preventDefault();
         console.log('dont reload', name + email, password, gender);
-        const res = await axios.post('http://localhost:3012/user',{
+        const res = await axios.post('http://api.ybcreates.ml/user',{
             name,
             email,
             password,

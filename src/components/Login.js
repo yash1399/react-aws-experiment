@@ -16,7 +16,7 @@ const Login = () => {
     const onSubmit =  async (event) => {
         event.preventDefault();
         console.log('dont reload',email, password,);
-        const res = await axios.post('http://localhost:3012/login ',{
+        const res = await axios.post('http://api.ybcreates.ml/login ',{
             email,
             password,
    
@@ -27,7 +27,7 @@ const Login = () => {
 
     const onClickPro = async () => {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3012/protected', {
+        const res = await axios.get('http://api.ybcreates.ml/protected', {
             headers :{
                 token
             }
